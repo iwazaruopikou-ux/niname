@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新月水 プレミアムシリカ水</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --off-white:   #faf8f4;
+  --cream:       #f3efe8;
+  --petal:       #e8d8d2;
+  --blush:       #d4a9a0;
+  --silver:      #b8bec6;
+  --silver-lt:   #dde0e5;
+  --charcoal:    #3a3530;
+  --warm-gray:   #7a7068;
+  --moon:        #c8cdd6;
+  --accent:      #9b8b99;
+  --divider:     #e2dcd6;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: var(--off-white);
+  color: var(--charcoal);
+  font-size: 21px;
+  line-height: 2.1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page { max-width: 480px; margin: 0 auto; background: var(--off-white); }
+
+/* ===== TYPOGRAPHY ===== */
+.serif { font-family: 'Noto Serif JP', serif; }
+
+h1, h2, h3 {
+  font-family: 'Noto Serif JP', serif;
+  color: var(--charcoal);
+  line-height: 1.5;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+}
+
+.body-text {
+  font-size: 20px;
+  line-height: 2.2;
+  color: var(--warm-gray);
+  margin-bottom: 24px;
+  font-weight: 300;
+}
+
+/* ===== SECTION BASE ===== */
+section {
+  padding: 56px 28px;
+  position: relative;
+}
+
+section:nth-child(even) { background: var(--cream); }
+section:nth-child(odd)  { background: var(--off-white); }
+
+.section-label {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  color: var(--blush);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: block;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+}
+
+hr.divider {
+  border: none;
+  border-top: 1px solid var(--divider);
+  margin: 32px 0;
+}
+
+/* ===== IMAGE PLACEHOLDER ===== */
+.img-placeholder {
+  background: linear-gradient(135deg, var(--petal) 0%, var(--silver-lt) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--warm-gray);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  border-radius: 2px;
+  gap: 8px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+}
+
+.img-placeholder .img-icon {
+  font-size: 24px;
+  opacity: 0.5;
+}
+
+.img-placeholder .img-note {
+  font-size: 11px;
+  color: var(--warm-gray);
+  opacity: 0.8;
+  text-align: center;
+  padding: 0 16px;
+  line-height: 1.6;
+}
+
+/* ===== ① HERO ===== */
+.hero {
+  background: var(--off-white) !important;
+  padding: 0 !important;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-top {
+  background: linear-gradient(180deg, #e8e2dc 0%, var(--off-white) 100%);
+  padding: 48px 28px 40px;
+  position: relative;
+}
+
+.hero-top::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(200,205,214,0.3) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-moon {
+  font-size: 28px;
+  color: var(--silver);
+  margin-bottom: 16px;
+  display: block;
+  opacity: 0.7;
+}
+
+.hero-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: var(--blush);
+  margin-bottom: 16px;
+  display: block;
+  font-weight: 300;
+}
+
+.hero-title {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.hero-title-ruby {
+  font-size: 13px;
+  color: var(--warm-gray);
+  letter-spacing: 0.2em;
+  margin-bottom: 20px;
+  display: block;
+  font-weight: 300;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.hero-subtitle {
+  font-size: 14px;
+  color: var(--warm-gray);
+  line-height: 2.0;
+  margin-bottom: 32px;
+  font-weight: 300;
+}
+
+.hero-bottle {
+  width: 180px;
+  height: 240px;
+  margin: 0 auto 32px;
+}
+
+.hero-badges {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+  padding: 0 8px;
+}
+
+.badge {
+  border: 1px solid var(--silver);
+  padding: 5px 12px;
+  font-size: 11px;
+  color: var(--warm-gray);
+  background: rgba(255,255,255,0.6);
+  letter-spacing: 0.08em;
+  font-weight: 300;
+  border-radius: 20px;
+}
+
+.btn-primary {
+  display: block;
+  width: 100%;
+  background: var(--charcoal);
+  color: #fff;
+  padding: 18px 24px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.15em;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.2s;
+  border-radius: 2px;
+}
+
+.btn-primary:hover { background: #555048; }
+
+.hero-bottom {
+  padding: 20px 28px 0;
+  background: var(--off-white);
+}
+
+.hero-secure {
+  font-size: 11px;
+  color: var(--silver);
+  margin-top: 10px;
+  display: block;
+  letter-spacing: 0.05em;
+}
+
+/* ===== ② STORY ===== */
+.story-quote {
+  border-left: 2px solid var(--blush);
+  padding: 4px 0 4px 16px;
+  font-style: italic;
+  color: var(--warm-gray);
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 20px 0;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 300;
+}
+
+/* ===== ③ FEATURES ===== */
+.feature-list { margin-top: 8px; }
+
+.feature-item {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 32px;
+  align-items: flex-start;
+}
+
+.feature-num {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--silver);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--warm-gray);
+  flex-shrink: 0;
+  font-family: 'Noto Serif JP', serif;
+  background: rgba(255,255,255,0.5);
+  margin-top: 2px;
+}
+
+.feature-text h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  letter-spacing: 0.03em;
+}
+
+.feature-text p {
+  font-size: 19px;
+  color: var(--warm-gray);
+  line-height: 2.1;
+  font-weight: 300;
+}
+
+/* ===== ④ SILICA ===== */
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+  font-size: 19px;
+}
+
+.spec-table th, .spec-table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--divider);
+}
+
+.spec-table th {
+  font-weight: 400;
+  color: var(--warm-gray);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  background: rgba(184,190,198,0.1);
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.spec-table td { font-weight: 300; }
+
+.spec-table td strong {
+  color: var(--charcoal);
+  font-weight: 500;
+}
+
+/* ===== ⑤ 美容と健康 ===== */
+.beauty-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.beauty-card {
+  background: rgba(255,255,255,0.7);
+  border: 1px solid var(--divider);
+  padding: 16px 14px;
+  border-radius: 4px;
+}
+
+.beauty-card .beauty-icon {
+  font-size: 20px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.beauty-card h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  letter-spacing: 0.03em;
+}
+
+.beauty-card p {
+  font-size: 16px;
+  color: var(--warm-gray);
+  line-height: 2.0;
+  font-weight: 300;
+}
+
+/* ===== ⑥ 新月の力 ===== */
+.moon-section {
+  background: linear-gradient(180deg, #2a2830 0%, #1e1d24 100%) !important;
+  color: #e8e4de;
+}
+
+.moon-section .section-label { color: var(--moon); }
+.moon-section .section-title { color: #f0ece6; }
+.moon-section .body-text { color: #b0aaa8; }
+
+.moon-section hr.divider {
+  border-top-color: rgba(255,255,255,0.1);
+}
+
+.moon-quote {
+  border-left: 1px solid var(--moon);
+  padding: 4px 0 4px 16px;
+  font-style: italic;
+  color: var(--moon);
+  font-size: 14px;
+  line-height: 2.0;
+  margin: 24px 0;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 300;
+}
+
+.moon-info {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(200,205,214,0.2);
+  padding: 20px;
+  border-radius: 4px;
+  margin-top: 24px;
+}
+
+.moon-info p {
+  font-size: 18px;
+  color: #a8a4a0;
+  line-height: 2.1;
+  font-weight: 300;
+}
+
+.moon-info strong { color: var(--moon); font-weight: 400; }
+
+/* ===== ⑦ 口コミ ===== */
+.voice-card {
+  background: rgba(255,255,255,0.8);
+  border: 1px solid var(--divider);
+  padding: 20px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+}
+
+.voice-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.voice-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.voice-name {
+  font-size: 17px;
+  color: var(--warm-gray);
+  font-weight: 300;
+}
+
+.voice-text {
+  font-size: 19px;
+  line-height: 2.2;
+  color: var(--charcoal);
+  font-weight: 300;
+}
+
+/* ===== ⑧ CTA ===== */
+.cta-section {
+  background: var(--cream) !important;
+  text-align: center;
+}
+
+.cta-bottle {
+  width: 140px;
+  height: 200px;
+  margin: 0 auto 28px;
+}
+
+.price-box {
+  background: #fff;
+  border: 1px solid var(--divider);
+  padding: 24px 20px;
+  margin: 0 0 24px;
+  text-align: left;
+  border-radius: 4px;
+}
+
+.price-main {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--charcoal);
+  margin-bottom: 4px;
+}
+
+.price-main span {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--warm-gray);
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.price-sub {
+  font-size: 17px;
+  color: var(--warm-gray);
+  line-height: 2.0;
+  font-weight: 300;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--divider);
+}
+
+.stripe-note {
+  font-size: 15px;
+  color: var(--silver);
+  margin-top: 10px;
+  display: block;
+  letter-spacing: 0.03em;
+}
+
+.delivery-note {
+  font-size: 18px;
+  color: var(--warm-gray);
+  line-height: 2.2;
+  font-weight: 300;
+  text-align: left;
+  margin-top: 24px;
+  padding: 20px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 4px;
+}
+
+/* ===== ⑨ FAQ ===== */
+.faq-item {
+  border-bottom: 1px solid var(--divider);
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+.faq-q {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--charcoal);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.7;
+}
+
+.faq-q::before {
+  content: 'Q.';
+  color: var(--blush);
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 400;
+  flex-shrink: 0;
+}
+
+.faq-a {
+  font-size: 19px;
+  color: var(--warm-gray);
+  line-height: 2.2;
+  font-weight: 300;
+  margin-top: 12px;
+  padding-left: 24px;
+}
+
+/* ===== ⑩ B2B ===== */
+.b2b-section {
+  background: var(--off-white) !important;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+
+.form-label .required {
+  color: var(--blush);
+  font-size: 15px;
+  margin-left: 4px;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  border: 1px solid var(--silver-lt);
+  background: #fff;
+  padding: 16px 18px;
+  font-size: 20px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+  color: var(--charcoal);
+  border-radius: 2px;
+  outline: none;
+  transition: border-color 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--blush);
+}
+
+.form-textarea {
+  height: 120px;
+  resize: vertical;
+  line-height: 1.8;
+}
+
+.form-note {
+  font-size: 12px;
+  color: var(--silver);
+  margin-top: 16px;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* ===== ⑪ FOOTER ===== */
+footer {
+  background: var(--charcoal) !important;
+  padding: 40px 28px !important;
+  text-align: center;
+}
+
+.footer-logo {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 16px;
+  color: var(--moon);
+  letter-spacing: 0.2em;
+  margin-bottom: 20px;
+  display: block;
+  font-weight: 300;
+}
+
+.footer-info {
+  font-size: 12px;
+  color: #706860;
+  line-height: 2.0;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.footer-links a {
+  font-size: 11px;
+  color: #706860;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #504840;
+  padding-bottom: 2px;
+}
+
+.footer-copy {
+  font-size: 10px;
+  color: #504840;
+  letter-spacing: 0.1em;
+}
+
+/* ===== SCROLL ANIMATION ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ① HERO -->
+  <section class="hero">
+    <div class="hero-top">
+      <span class="hero-moon">🌑</span>
+      <span class="hero-eyebrow">新月採水 ／ 阿蘇・九重連山の湧水</span>
+      <h1 class="hero-title serif">新月水</h1>
+      <span class="hero-title-ruby">新月水 プレミアムシリカ水</span>
+      <p class="hero-subtitle">
+        飲みやすい軟水に、最高ランクのシリカ。<br>
+        古来の知恵が宿る、数量限定の天然水。
+      </p>
+
+      <img src="images/hero-bottle.jpg" alt="新月水 プレミアムシリカ水" style="width:180px;height:260px;object-fit:contain;margin:0 auto 32px;display:block;">
+
+      <div class="hero-badges">
+        <span class="badge">シリカ 99mg/L</span>
+        <span class="badge">軟水</span>
+        <span class="badge">新月採水</span>
+        <span class="badge">数量限定</span>
+      </div>
+    </div>
+    <div class="hero-bottom">
+      <a href="#purchase" class="btn-primary">今すぐ購入する →</a>
+      <span class="hero-secure">🔒 SSL暗号化通信 ／ Stripe安全決済</span>
+      <div style="height:40px;"></div>
+    </div>
+  </section>
+
+  <!-- ② STORY -->
+  <section class="fade-in">
+    <span class="section-label">Story</span>
+    <h2 class="section-title">なぜ、新月の時にしか<br>採水しないのか。</h2>
+    <p class="body-text">
+      古来より、物事を始めるのは新月が吉とされてきました。シルク・ド・ソレイユも、新月に幕を開け満月に閉じる——それほど月の力は人の営みに深く根ざしています。
+    </p>
+    <p class="body-text">
+      新月水は、熊本・阿蘇山系と九重連山の湧き水が交わる「夫婦滝」の地下から、新月の時期にだけ汲み上げられます。その月ごとの数量限定が、この水の希少性を守っています。
+    </p>
+
+    <img src="images/story-spring.jpg" alt="阿蘇・湧水の風景" style="width:100%;height:220px;object-fit:cover;border-radius:2px;margin:20px 0;display:block;">
+  </section>
+
+  <!-- ③ FEATURES -->
+  <section class="fade-in">
+    <span class="section-label">Features</span>
+    <h2 class="section-title">他のシリカ水と、<br>何が違うのか。</h2>
+
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="feature-num">01</div>
+        <div class="feature-text">
+          <h3>シリカ含有量、最高ランク</h3>
+          <p>シリカ99mg/L・サルフェート34mg/L。肌・爪・髪・血管の健康維持に欠かせない「美のミネラル」を最大級に含有。</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-num">02</div>
+        <div class="feature-text">
+          <h3>貴重な「軟水」のシリカ水</h3>
+          <p>ほとんどのシリカ水は中硬水以上で飲みにくいもの。新月水は軟水なので口当たりがまろやかで、毎日続けやすい。</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-num">03</div>
+        <div class="feature-text">
+          <h3>新月の時のみ、数量限定採水</h3>
+          <p>毎月の新月にしか汲み上げない。その希少性が、水の鮮度と特別感を守ります。</p>
+        </div>
+      </div>
+    </div>
+
+    <img src="images/features-bottle.jpg" alt="ミネラルウォーターボトル" style="width:100%;height:180px;object-fit:cover;border-radius:2px;margin-top:8px;display:block;">
+  </section>
+
+  <!-- ④ SILICA -->
+  <section class="fade-in">
+    <span class="section-label">About Silica</span>
+    <h2 class="section-title">「シリカ」は、<br>体内で作れないミネラル。</h2>
+    <p class="body-text">
+      シリカ（ケイ素）は、ヒアルロン酸・コラーゲン・エラスチンを強化する働きを持つミネラルです。皮膚・爪・骨・血管に多く含まれ、加齢とともに減少しますが、体内では生成できません。
+    </p>
+    <p class="body-text">
+      また、サルフェートは温泉にも含まれるミネラルで、体内の有害物質を排出し新陳代謝を高める働きがあります。日本産の水には少ない成分です。
+    </p>
+
+    <table class="spec-table">
+      <tr>
+        <th>成分</th>
+        <th>含有量</th>
+        <th>特徴</th>
+      </tr>
+      <tr>
+        <td><strong>シリカ</strong></td>
+        <td><strong>99mg/L</strong></td>
+        <td>最高ランク</td>
+      </tr>
+      <tr>
+        <td><strong>サルフェート</strong></td>
+        <td><strong>34mg/L</strong></td>
+        <td>国産水では希少</td>
+      </tr>
+      <tr>
+        <td><strong>硬度</strong></td>
+        <td><strong>軟水</strong></td>
+        <td>飲みやすさ ◎</td>
+      </tr>
+    </table>
+
+    <img src="images/silica-clean.jpg" alt="清潔感イメージ" style="width:100%;height:160px;object-fit:cover;border-radius:2px;margin-top:20px;display:block;">
+  </section>
+
+  <!-- ⑤ 美容と健康 -->
+  <section class="fade-in">
+    <span class="section-label">Beauty &amp; Health</span>
+    <h2 class="section-title">毎日飲むだけで、<br>内側からケアする。</h2>
+
+    <img src="images/beauty-woman.jpg" alt="女性が水を飲むシーン" style="width:100%;height:220px;object-fit:cover;object-position:center top;border-radius:2px;margin-bottom:20px;display:block;">
+
+    <p class="body-text">
+      美しさは、外側からだけでは作れません。肌のうるおい、髪のツヤ、爪のしなやかさ——それらはすべて、体の内側の状態が表れたもの。
+    </p>
+    <p class="body-text">
+      シリカはヒアルロン酸・コラーゲン・エラスチンを体内で強化する働きがあります。サプリではなく水として取り入れることで、毎日無理なく続けられます。
+    </p>
+
+    <hr class="divider">
+
+    <div class="beauty-grid">
+      <div class="beauty-card">
+        <span class="beauty-icon">✨</span>
+        <h3>肌のうるおいに</h3>
+        <p>ヒアルロン酸・コラーゲンの生成をサポート。内側からハリをキープ。</p>
+      </div>
+      <div class="beauty-card">
+        <span class="beauty-icon">💆</span>
+        <h3>髪・爪のツヤに</h3>
+        <p>シリカは髪のツヤや強度にも関わるミネラル。飲み続けて変化を実感。</p>
+      </div>
+      <div class="beauty-card">
+        <span class="beauty-icon">🌿</span>
+        <h3>デトックスに</h3>
+        <p>サルフェートが体内の不要なものを排出。温泉水にも含まれる成分。</p>
+      </div>
+      <div class="beauty-card">
+        <span class="beauty-icon">💗</span>
+        <h3>健康維持に</h3>
+        <p>シリカは血管の弾力性を保つ働きも。年齢を重ねるほど大切なミネラル。</p>
+      </div>
+    </div>
+
+    <img src="images/beauty-skin.jpg" alt="美容イメージ" style="width:100%;height:180px;object-fit:cover;object-position:center top;border-radius:2px;margin-top:20px;display:block;">
+  </section>
+
+  <!-- ⑥ 新月の力 -->
+  <section class="moon-section fade-in">
+    <span class="section-label">Moon Power</span>
+    <h2 class="section-title">月が満ちるように、<br>あなたも満たされていく。</h2>
+
+    <img src="images/moon-night.jpg" alt="新月の夜空" style="width:100%;height:220px;object-fit:cover;border-radius:2px;margin-bottom:24px;display:block;">
+
+    <p class="body-text">
+      新月は、始まりの時。何かを新しく始めたい夜、自分を整えたい夜に、月はそっと背中を押してくれます。
+    </p>
+    <p class="body-text">
+      潮の満ち引き、植物の成長、女性のからだのリズム——月は古くから、自然のすべてと深くつながってきました。新月水は、そのサイクルの中でもっとも清らかな新月の時にだけ汲み上げられます。
+    </p>
+
+    <hr class="divider">
+
+    <div class="moon-quote">
+      「新月にはじめると吉」——それは、エネルギーが静まり、<br>
+      新しいものを受け取る準備が整う時間だから。
+    </div>
+
+    <p class="body-text">
+      毎朝、一杯の新月水を飲む。それだけで、自分の体と自然のリズムをゆっくりと合わせていく。そんな小さな習慣が、日々の自分を変えていきます。
+    </p>
+
+    <div class="moon-info">
+      <p>
+        <strong>🌑 新月とは</strong><br>
+        月が地球と太陽の間に入り、月面が見えなくなる日。古来より「物事の始まり」とされ、新嘗祭も新月に由来を持つ。毎月訪れる、リセットと再生のタイミング。
+      </p>
+    </div>
+
+    <img src="images/moon-cycle.jpg" alt="月のサイクル" style="width:100%;height:180px;object-fit:cover;border-radius:2px;margin-top:24px;display:block;">
+  </section>
+
+  <!-- ⑦ 口コミ -->
+  <section class="fade-in">
+    <span class="section-label">Voice</span>
+    <h2 class="section-title">飲んだ方からの声</h2>
+
+    <img src="images/beauty-woman.jpg" alt="女性のイメージ" style="width:100%;height:160px;object-fit:cover;object-position:center top;border-radius:2px;margin-bottom:24px;display:block;">
+
+    <div class="voice-card">
+      <div class="voice-header">
+        <div style="width:44px;height:44px;border-radius:50%;background:var(--petal);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;">🌸</div>
+        <span class="voice-name">中里 さや香 様</span>
+      </div>
+      <p class="voice-text">飲みやすいし、お水だから続けられそう。シリカは美のミネラルって聞いて毎日持ち歩いてます。</p>
+    </div>
+
+    <div class="voice-card">
+      <div class="voice-header">
+        <div style="width:44px;height:44px;border-radius:50%;background:var(--petal);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;">🌸</div>
+        <span class="voice-name">kanako 様</span>
+      </div>
+      <p class="voice-text">軟水なので子供と一緒に飲めるのが嬉しい。シリカ99mgとサルフェート34mg/Lという素晴らしさ。</p>
+    </div>
+
+    <div class="voice-card">
+      <div class="voice-header">
+        <div style="width:44px;height:44px;border-radius:50%;background:var(--petal);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;">🌸</div>
+        <span class="voice-name">きらち 様</span>
+      </div>
+      <p class="voice-text">硬水特有の重みやシリカ水の土っぽさが苦手でしたが、こちらはすごく軽やかなのどごしでグビグビ飲めます。</p>
+    </div>
+  </section>
+
+  <!-- 「新嘗」という名前に込めた思い -->
+  <section class="fade-in">
+    <span class="section-label">Our Story</span>
+    <h2 class="section-title">「新嘗」という名前に<br>込めた思い。</h2>
+    <p class="body-text">
+      新嘗祭は、日本古来の五穀豊穣を感謝する祭り。その精神を現代に受け継ぎ、日本の大地の恵みを届けたいという思いからこの水は生まれました。
+    </p>
+    <div class="story-quote">
+      日本の自然と伝統が交わる場所から、<br>
+      ひとつひとつ丁寧に採水された水。
+    </div>
+
+    <img src="images/story-spring.jpg" alt="自然の湧水の風景" style="width:100%;height:200px;object-fit:cover;border-radius:2px;margin-top:16px;display:block;">
+  </section>
+
+  <!-- ⑧ CTA -->
+  <section class="cta-section fade-in" id="purchase">
+    <span class="section-label">Purchase</span>
+    <h2 class="section-title">ご購入</h2>
+
+    <img src="images/hero-bottle.jpg" alt="新月水 プレミアムシリカ水" style="width:180px;height:260px;object-fit:contain;margin:0 auto 28px;display:block;">
+
+    <div class="price-box">
+      <div class="price-main">¥8,640 <span>/ 1ケース</span></div>
+      <div class="price-sub">
+        500ml × 24本入り ／ 税込<br>
+        1本あたり 360円 ／ 送料別<br>
+        工場直送・受注生産
+      </div>
+    </div>
+
+    <a href="#" class="btn-primary">購入手続きへ（Stripe）</a>
+    <span class="stripe-note">🔒 クレジットカード・各種決済対応 ／ SSL暗号化通信</span>
+
+    <div class="delivery-note">
+      ■ お届けについて<br>
+      受注後、工場より直送いたします。<br>
+      離島・一部地域は別途ご相談ください。
+    </div>
+  </section>
+
+  <!-- ⑨ FAQ -->
+  <section class="fade-in">
+    <span class="section-label">FAQ</span>
+    <h2 class="section-title">よくある質問</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">毎月買えますか？</div>
+      <p class="faq-a">新月採水のため、月ごとの数量限定です。在庫がなくなり次第、次の採水まで販売を停止します。</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">子供や妊婦でも飲めますか？</div>
+      <p class="faq-a">軟水のため飲みやすく、お子様にもお召し上がりいただけます。ただし、体調等が心配な場合は医師にご相談ください。</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">送料はかかりますか？</div>
+      <p class="faq-a">送料は別途かかります。ご注文時に表示されます。離島はご相談ください。</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">返品・交換はできますか？</div>
+      <p class="faq-a">商品に問題がある場合はご連絡ください。詳細は特定商取引法に基づく表記をご確認ください。</p>
+    </div>
+  </section>
+
+  <!-- ⑩ B2B 問い合わせ -->
+  <section class="b2b-section fade-in">
+    <span class="section-label">Wholesale</span>
+    <h2 class="section-title">業者様・販売店様へ</h2>
+    <p class="body-text">
+      卸販売のご相談を承っております。エステサロン、飲食店、健康食品店など業種問わずお気軽にご連絡ください。
+    </p>
+
+    <hr class="divider">
+
+    <div class="form-group">
+      <label class="form-label">会社名<span class="required">必須</span></label>
+      <input type="text" class="form-input" placeholder="株式会社〇〇">
+    </div>
+    <div class="form-group">
+      <label class="form-label">お名前<span class="required">必須</span></label>
+      <input type="text" class="form-input" placeholder="山田 花子">
+    </div>
+    <div class="form-group">
+      <label class="form-label">メールアドレス<span class="required">必須</span></label>
+      <input type="email" class="form-input" placeholder="example@mail.com">
+    </div>
+    <div class="form-group">
+      <label class="form-label">電話番号</label>
+      <input type="tel" class="form-input" placeholder="090-0000-0000">
+    </div>
+    <div class="form-group">
+      <label class="form-label">ご相談内容<span class="required">必須</span></label>
+      <textarea class="form-textarea" placeholder="ご相談内容をご記入ください"></textarea>
+    </div>
+
+    <button class="btn-primary" type="button">送信する</button>
+
+    <p class="form-note">
+      送信後、プレミアムシリカ事務局より確認メールをお送りします。<br>
+      通常2〜3営業日以内にご返信いたします。
+    </p>
+  </section>
+
+  <!-- ⑪ FOOTER -->
+  <footer>
+    <span class="footer-logo">新月水 プレミアムシリカ水</span>
+    <div class="footer-info">
+      販売元：ジーレックスジャパン株式会社<br>
+      〒290-0056 千葉県市原市五井2437-2<br>
+      Tel 0436-63-3015
+    </div>
+    <div class="footer-links">
+      <a href="#">特定商取引法に基づく表記</a>
+      <a href="#">プライバシーポリシー</a>
+    </div>
+    <p class="footer-copy">© 2025 G/REX Japan Co., Ltd.</p>
+  </footer>
+
+</div>
+
+<script>
+// スクロールアニメーション
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// ============================================================
+// B2Bフォーム送信処理
+// ★ デプロイ後にGASのURLをここに貼り付けてください
+// ============================================================
+const FORM_ACTION = 'ここにGASのデプロイURLを貼り付ける';
+
+document.querySelector('.btn-primary[type="button"]').addEventListener('click', function () {
+  var company = document.querySelector('input[placeholder="株式会社〇〇"]').value.trim();
+  var name    = document.querySelector('input[placeholder="山田 花子"]').value.trim();
+  var email   = document.querySelector('input[placeholder="example@mail.com"]').value.trim();
+  var phone   = document.querySelector('input[placeholder="090-0000-0000"]').value.trim();
+  var message = document.querySelector('textarea').value.trim();
+  var btn     = this;
+
+  // バリデーション
+  if (!company || !name || !email || !message) {
+    alert('必須項目（会社名・お名前・メールアドレス・ご相談内容）をご入力ください。');
+    return;
+  }
+
+  if (!email.includes('@')) {
+    alert('メールアドレスの形式が正しくありません。');
+    return;
+  }
+
+  // 送信中状態
+  btn.textContent = '送信中...';
+  btn.disabled = true;
+
+  var params = new URLSearchParams({
+    company: company,
+    name:    name,
+    email:   email,
+    phone:   phone,
+    message: message
+  });
+
+  fetch(FORM_ACTION, {
+    method: 'POST',
+    body:   params,
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.status === 'success') {
+      // 成功メッセージ表示
+      var form = btn.closest('section');
+      form.innerHTML = `
+        <div style="text-align:center;padding:40px 0;">
+          <div style="font-size:40px;margin-bottom:20px;">✉️</div>
+          <h2 style="font-family:'Noto Serif JP',serif;font-size:22px;font-weight:500;margin-bottom:16px;color:#3a3530;">
+            お問い合わせを受け付けました
+          </h2>
+          <p style="font-size:16px;color:#7a7068;line-height:2.0;">
+            ${name} 様のメールアドレスに<br>確認メールをお送りしました。<br>
+            通常2〜3営業日以内にご連絡いたします。
+          </p>
+        </div>
+      `;
+    } else {
+      alert('送信に失敗しました。時間をおいて再度お試しください。');
+      btn.textContent = '送信する';
+      btn.disabled = false;
+    }
+  })
+  .catch(() => {
+    alert('通信エラーが発生しました。時間をおいて再度お試しください。');
+    btn.textContent = '送信する';
+    btn.disabled = false;
+  });
+});
+</script>
+</body>
+</html>

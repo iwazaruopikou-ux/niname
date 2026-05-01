@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新月水 プロモーション戦略</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: #faf8f4;
+  color: #3a3530;
+  font-size: 14px;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 32px;
+}
+
+/* HEADER */
+.doc-header {
+  border-bottom: 2px solid #3a3530;
+  padding-bottom: 24px;
+  margin-bottom: 48px;
+}
+
+.doc-header .label {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: #b8bec6;
+  margin-bottom: 8px;
+  display: block;
+  font-weight: 300;
+}
+
+.doc-header h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.doc-header .meta {
+  font-size: 12px;
+  color: #7a7068;
+  font-weight: 300;
+}
+
+/* SUMMARY BOX */
+.summary-box {
+  background: #3a3530;
+  color: #f0ece6;
+  padding: 28px 32px;
+  margin-bottom: 48px;
+  border-radius: 2px;
+}
+
+.summary-box h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  margin-bottom: 16px;
+  color: #b8bec6;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.summary-item .num {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: #d4a9a0;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.summary-item .label {
+  font-size: 11px;
+  color: #9a9590;
+  letter-spacing: 0.1em;
+  font-weight: 300;
+}
+
+/*施策カード */
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 32px;
+  margin-top: 56px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e2dcd6;
+}
+
+.section-num {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: #d4a9a0;
+  line-height: 1;
+}
+
+.section-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+.section-tag {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin-left: auto;
+}
+
+.tag-btoc { background: #fce8e4; color: #c0706a; }
+.tag-btob { background: #e4ecfc; color: #6a88c0; }
+.tag-both { background: #e8f4e8; color: #5a9060; }
+
+.card {
+  background: #fff;
+  border: 1px solid #e2dcd6;
+  border-radius: 4px;
+  padding: 24px 28px;
+  margin-bottom: 16px;
+}
+
+.card-title {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: #b8bec6;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.card-body {
+  font-size: 13px;
+  color: #3a3530;
+  line-height: 1.9;
+  font-weight: 300;
+}
+
+.card-body strong {
+  font-weight: 500;
+  color: #3a3530;
+}
+
+/* 2カラム */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* アクションリスト */
+.action-list {
+  list-style: none;
+  margin-top: 8px;
+}
+
+.action-list li {
+  display: flex;
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px dashed #e2dcd6;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.action-list li:last-child { border-bottom: none; }
+
+.action-list li::before {
+  content: '→';
+  color: #d4a9a0;
+  flex-shrink: 0;
+  font-weight: 400;
+}
+
+/* 優先度バッジ */
+.priority {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.priority-high { background: #fce8e4; color: #c0706a; }
+.priority-mid  { background: #fef6e4; color: #b08040; }
+.priority-low  { background: #f0f0ec; color: #888; }
+
+/* KPI表 */
+.kpi-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.kpi-table th {
+  background: #f5f3ee;
+  padding: 8px 12px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: #7a7068;
+  border-bottom: 1px solid #e2dcd6;
+}
+
+.kpi-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e2dcd6;
+  font-weight: 300;
+  vertical-align: top;
+  line-height: 1.7;
+}
+
+.kpi-table tr:last-child td { border-bottom: none; }
+
+/* 全体ロードマップ */
+.roadmap {
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 2px solid #3a3530;
+}
+
+.roadmap h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.phase {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+  align-items: start;
+}
+
+.phase-label {
+  background: #3a3530;
+  color: #f0ece6;
+  padding: 8px 12px;
+  text-align: center;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+
+.phase-content {
+  background: #fff;
+  border: 1px solid #e2dcd6;
+  padding: 16px 20px;
+  border-radius: 2px;
+}
+
+.phase-content h3 {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #3a3530;
+}
+
+.phase-content p {
+  font-size: 13px;
+  color: #7a7068;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* FOOTER */
+.doc-footer {
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid #e2dcd6;
+  font-size: 11px;
+  color: #b8bec6;
+  font-weight: 300;
+  text-align: right;
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="doc-header">
+    <span class="label">PROMOTION STRATEGY</span>
+    <h1>新月水 プレミアムシリカ水<br>プロモーション戦略</h1>
+    <p class="meta">ジーレックスジャパン株式会社 ／ 2025</p>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="summary-box">
+    <h2>OVERVIEW</h2>
+    <div class="summary-grid">
+      <div class="summary-item">
+        <div class="num">8</div>
+        <div class="label">施策数</div>
+      </div>
+      <div class="summary-item">
+        <div class="num">¥8,640</div>
+        <div class="label">販売単価（1ケース）</div>
+      </div>
+      <div class="summary-item">
+        <div class="num">~¥2,755</div>
+        <div class="label">1ケース粗利（7%控除後）</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ① D2C -->
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div class="section-title">D2C（自社EC）＋定期購入</div>
+    <span class="section-tag tag-btoc">BtoC</span>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <div class="card-title">ターゲット</div>
+      <div class="card-body">
+        30〜60代女性。健康・美容意識が高く、ネットで購入慣れしている層。
+        シリカ水を知っており、「より良いもの」を探している人。
+        月のリズム・自然志向に共感する人。
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">販売形態</div>
+      <div class="card-body">
+        <strong>単発購入：</strong>1ケース ¥8,640（税込・送料別）<br>
+        <strong>定期購入：</strong>月1ケース 5〜10%割引。新月のタイミングで届く演出。<br>
+        決済：Stripe（クレジット・各種決済対応）
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">アプローチ</div>
+    <ul class="action-list">
+      <li>今回作成したLPをVercelにデプロイし、Stripeと接続して販売開始</li>
+      <li>定期購入はStripe Subscriptionで月次自動課金を設定</li>
+      <li>「新月に届く定期便」というコンセプトでリピート動機を強化</li>
+      <li>購入者にメールフォローアップ（GASで自動化）</li>
+    </ul>
+  </div>
+
+  <!-- ② SNS -->
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <div class="section-title">SNS経由の直販・インフルエンサー施策</div>
+    <span class="section-tag tag-btoc">BtoC</span>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <div class="card-title">ターゲット</div>
+      <div class="card-body">
+        Instagram活動中の20〜40代女性。美容・健康・スピリチュアル・ヨガ系アカウントのフォロワー。
+        フォロワー数より「エンゲージメント率が高いマイクロインフルエンサー」が効果的。
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">既存口コミの活用</div>
+      <div class="card-body">
+        すでにInstagramに口コミが存在する。これを許可を得てLP・自社SNSに転載。
+        口コミ投稿者に「アフィリエイトコード」を発行して再拡散を促す。
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">アプローチ</div>
+    <ul class="action-list">
+      <li>自社Instagramを開設・整備。新月採水・阿蘇の自然・美容ストーリーを月1〜2回投稿</li>
+      <li>マイクロインフルエンサー（フォロワー1,000〜10,000）に商品提供＋アフィリエイトコード発行</li>
+      <li>アフィリエイトはLPのStripeにクーポンコードを設定して販売数を管理</li>
+      <li>ハッシュタグ：#シリカ水 #新月 #美のミネラル #軟水 #阿蘇 などを設定</li>
+      <li>新月の日に合わせた投稿スケジュールで「月のリズム」感を演出</li>
+    </ul>
+  </div>
+
+  <!-- ③ ギフト -->
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div class="section-title">ギフト・お返し需要</div>
+    <span class="section-tag tag-btoc">BtoC</span>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <div class="card-title">ターゲット</div>
+      <div class="card-body">
+        出産内祝い・快気祝い・結婚祝い・お中元・お歳暮の需要層。
+        「ちょっと珍しいもの・ストーリーのある贈り物」を探している人。
+        健康を気にする50〜70代への贈り物を探す30〜50代。
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">商品設定</div>
+      <div class="card-body">
+        <strong>ギフトセット：</strong>6本入り（半ケース）＋のし対応<br>
+        <strong>価格目安：</strong>¥3,000〜¥5,000（送料込み）<br>
+        「新月水」という名前と新嘗祭ストーリーがギフトの付加価値になる
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">アプローチ</div>
+    <ul class="action-list">
+      <li>LPにギフト専用セクションを追加（のし・ラッピング対応の明記）</li>
+      <li>出産内祝いサイト（ハーモニック・カタログギフト系）への掲載打診</li>
+      <li>「お世話になった方への贈り物に」という切り口でSNS投稿</li>
+      <li>Stripe Checkoutにギフト用メッセージカード入力欄を追加</li>
+    </ul>
+  </div>
+
+  <!-- ④ スピリチュアル・ヨガ -->
+  <div class="section-header">
+    <div class="section-num">04</div>
+    <div class="section-title">スピリチュアル・ヨガ系サロン</div>
+    <span class="section-tag tag-btob">BtoB</span>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <div class="card-title">ターゲット</div>
+      <div class="card-body">
+        ヨガスタジオ・瞑想サロン・アロマサロン・ヒーリングサロン・占いサロンのオーナー。
+        「エビデンス」より「世界観・ストーリー」で商品を選ぶ。
+        Instagram・Facebookで集客している個人オーナーが多い。
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">販売形態</div>
+      <div class="card-body">
+        <strong>委託販売：</strong>売れた分だけ支払い（在庫リスクなし）<br>
+        <strong>コラボ企画：</strong>「新月ヨガ」「新月瞑想」イベントに新月水を提供<br>
+        <strong>卸価格：</strong>要相談（1ケース単位から）
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">アプローチ</div>
+    <ul class="action-list">
+      <li>InstagramでヨガサロンのオーナーをDM営業（新月・月のリズム系ハッシュタグで検索）</li>
+      <li>Facebookの「ヨガインストラクター」「スピリチュアル」グループで紹介投稿</li>
+      <li>一部サロンへ無料サンプル提供（1〜2本）→体験後に委託販売打診</li>
+      <li>「新月のイベントに合わせて使える水」という切り口でアプローチ</li>
+      <li>フォーム営業：ヨガスタジオのサイト問い合わせフォームから一斉送信</li>
+    </ul>
+  </div>
+
+  <!-- ⑤ 職場・オフィス -->
+  <div class="section-header">
+    <div class="section-num">05</div>
+    <div class="section-title">職場・オフィスへのケース販売</div>
+    <span class="section-tag tag-btob">BtoB</span>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <div class="card-title">ターゲット</div>
+      <div class="card-body">
+        女性従業員比率が高い企業・職場。
+        健康経営・女性活躍推進・SDGsを掲げている会社。
+        美容・医療・介護・教育・コンサルなど女性管理職が多い業種。
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">提案内容</div>
+      <div class="card-body">
+        <strong>ウォーターサーバー代替：</strong>1ケース月定期 ¥8,640〜<br>
+        <strong>訴求ポイント：</strong>「女性社員の健康・美容サポート」「健康経営の一環」<br>
+        複数ケース導入で送料無料など特典設定も可
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">アプローチ</div>
+    <ul class="action-list">
+      <li>女性活躍推進法対応企業リスト（厚労省「えるぼし認定」企業）をターゲットリスト化</li>
+      <li>SDGs・健康経営優良法人認定企業への営業メール送付</li>
+      <li>総務部・購買担当者へのフォーム営業・メール営業</li>
+      <li>「社員の健康を水から始める」という切り口の法人向けLPを別途作成</li>
+      <li>まず周辺の中小企業（社長が知人）への口コミ営業から始める</li>
+    </ul>
+  </div>
+
+  <!-- ⑥ ブライダル -->
+  <div class="section-header">
+    <div class="section-num">06</div>
+    <div class="section-title">ブライダル・内祝いのギフト卸</div>
+    <span class="section-tag tag-btob">BtoB</span>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <div class="card-title">ターゲット</div>
+      <div class="card-body">
+        ウェディングプランナー個人・フリーランスプランナー。
+        少人数婚・ナチュラルウェディング・神前式など「ストーリー」を大切にするプランナー。
+        引き出物・プチギフト・テーブルウォーターを探している。
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">提案内容</div>
+      <div class="card-body">
+        <strong>テーブルウォーター：</strong>披露宴での卓上ボトルとして提案<br>
+        <strong>プチギフト：</strong>引き出物・プチギフトとしてのし対応<br>
+        <strong>訴求：</strong>「新嘗」「新月」というストーリーが結婚式の演出になる
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">アプローチ</div>
+    <ul class="action-list">
+      <li>InstagramでフリーランスWPをDM営業（#ウェディングプランナー #少人数婚）</li>
+      <li>ブライダル系フリーランサーのコミュニティ（Facebook・オンラインサロン）に参加・紹介</li>
+      <li>サンプル1〜2本を送付し、実際の式で使ってもらう体験営業</li>
+      <li>「水に込められたストーリー」を結婚式のコンセプトとして提案する資料を作成</li>
+    </ul>
+  </div>
+
+  <!-- ⑦ 福利厚生 -->
+  <div class="section-header">
+    <div class="section-num">07</div>
+    <div class="section-title">福利厚生サービス</div>
+    <span class="section-tag tag-btob">BtoB</span>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <div class="card-title">ターゲット</div>
+      <div class="card-body">
+        福利厚生サービスを提供する企業・プラットフォーム。
+        または福利厚生として社員に健康食品・飲料を提供したい中小企業。
+        特に女性従業員向けの福利厚生を充実させたい経営者。
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">アプローチ先</div>
+      <div class="card-body">
+        <strong>掲載先候補：</strong>ベネフィット・ワン、リロクラブ、WELBOX等の福利厚生プラットフォーム<br>
+        <strong>直接提案：</strong>中小企業の経営者・総務担当への「社員への健康投資」提案
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">アプローチ</div>
+    <ul class="action-list">
+      <li>福利厚生プラットフォームへの掲載申請（ベネフィット・ワン等）</li>
+      <li>「女性社員への健康投資」をテーマにした法人向け提案資料を作成</li>
+      <li>知人経営者・商工会・BNIなどの人脈を活用したロコミ営業</li>
+      <li>健康経営エキスポ・ウェルネス系展示会への出展検討</li>
+    </ul>
+  </div>
+
+  <!-- ⑧ LP＋SNS広告 -->
+  <div class="section-header">
+    <div class="section-num">08</div>
+    <div class="section-title">自社LP＋SNS広告での直販</div>
+    <span class="section-tag tag-both">BtoC / BtoB</span>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <div class="card-title">ターゲット</div>
+      <div class="card-body">
+        Instagram広告：30〜55代女性、美容・健康・スピリチュアル興味層。
+        Facebook広告：40〜60代女性、健康・美容関心層。法人担当者にも届きやすい。
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">広告予算の目安</div>
+      <div class="card-body">
+        <strong>テスト期間（1ヶ月）：</strong>¥30,000〜¥50,000<br>
+        <strong>CPAの目標：</strong>1ケース粗利¥2,755以内に広告費を抑える<br>
+        まずInstagram広告から小さく始めてデータを取る
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">アプローチ</div>
+    <ul class="action-list">
+      <li>今回作成のLPをそのまま広告のランディングページとして活用</li>
+      <li>Instagram広告：「新月の時だけ採水」「飲みやすい軟水のシリカ水」訴求の動画/画像</li>
+      <li>Facebook広告：法人向け（オフィス導入・福利厚生）訴求で並行テスト</li>
+      <li>Meta広告マネージャーでA/Bテスト（訴求軸：美容 vs 新月ストーリー）</li>
+      <li>リターゲティング広告でLP訪問者に再アプローチ</li>
+    </ul>
+  </div>
+
+  <!-- ロードマップ -->
+  <div class="roadmap">
+    <h2>実施ロードマップ（優先順位）</h2>
+
+    <div class="phase">
+      <div class="phase-label">STEP 1<br>今すぐ</div>
+      <div class="phase-content">
+        <h3>LP公開・Stripe接続（①⑧の基盤）</h3>
+        <p>VercelにデプロイしてStripeと接続。まず販売できる状態を作る。GASフォームも接続して⑤⑥のB2B問い合わせを受け付ける。</p>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="section-num" style="display:none;"></div>
+      <div class="phase-label">STEP 2<br>1ヶ月以内</div>
+      <div class="phase-content">
+        <h3>SNS・インフルエンサー（②）＋ヨガサロンDM（④）</h3>
+        <p>既存のInstagram口コミを活用してインフルエンサーにアフィリエイトコードを発行。ヨガ・スピリチュアルサロンへのDM営業を開始。サンプル送付で体験してもらう。</p>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-label">STEP 3<br>2〜3ヶ月</div>
+      <div class="phase-content">
+        <h3>ギフト展開（③⑥）＋オフィス営業（⑤）</h3>
+        <p>LPにギフトセクションを追加。ウェディングプランナーへのサンプル営業開始。健康経営企業リストへのメール営業を並行して実施。</p>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-label">STEP 4<br>3ヶ月以降</div>
+      <div class="phase-content">
+        <h3>SNS広告テスト（⑧）＋福利厚生（⑦）</h3>
+        <p>①〜⑥で売れた実績・口コミをもとにInstagram広告を小予算でテスト。データを見ながら拡大。福利厚生プラットフォームへの掲載申請も並行して進める。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="doc-footer">
+    新月水 プレミアムシリカ水 プロモーション戦略 ／ ジーレックスジャパン株式会社
+  </div>
+
+</div>
+</body>
+</html>
